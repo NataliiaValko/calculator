@@ -1,0 +1,22 @@
+.tickmarks__list {
+  display: flex;
+  width: 100%;
+  color: $color-border;
+  font-size: 14px;
+  //   justify-content: space-between;
+}
+.tickmarks__item:nth-child(-n + 6) {
+  margin-right: 17px;
+}
+
+.tickmarks__item:nth-child(-n + 8).tickmarks__item:nth-child(n + 7) {
+  margin-right: 14px;
+}
+
+.tickmarks__item:nth-child(-n + 11).tickmarks__item:nth-child(n + 9) {
+  margin-right: 10px;
+}
+
+// .tickmarks__item:nth-child(11) {
+//   margin-right: 11px;
+// }

@@ -1,0 +1,27 @@
+body {
+  font-family: $font-family-main;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  background-color: $color-light-main;
+  color: $color-text-main;
+}
+
+// a,
+button {
+  cursor: pointer;
+}
+
+// img {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+// }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

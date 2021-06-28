@@ -1,0 +1,17 @@
+.header {
+  padding-top: 60px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    width: 130px;
+
+    @media screen and (min-width: $mobile-secondary) {
+      width: 370px;
+      font-size: 28px;
+    }
+  }
+}
+
+//370px

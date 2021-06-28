@@ -1,0 +1,123 @@
+.details {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.details__title,
+.result__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.details__label,
+.details__term-label {
+  color: $color-text-secondary;
+  display: inline-block;
+}
+
+.details__label {
+  margin-bottom: 40px;
+}
+
+.details__select,
+.details__amount-input {
+  display: block;
+  margin-top: 10px;
+  width: 280px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 1.188;
+  border: 2px solid $color-border;
+  border-radius: 9px;
+  padding: 12px 45px 12px 20px;
+  background-color: transparent;
+}
+
+.details__amount-rang {
+  display: none;
+
+  @media screen and (min-width: $mobile-secondary) {
+    display: inline-block;
+  }
+}
+
+// .details__amount-input {
+//   position: relative;
+// }
+
+.details__label-amount {
+  position: relative;
+}
+.details__amount-currency {
+  position: absolute;
+  top: 70%;
+  right: 20px;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.details__rate {
+  background-color: $background-color-attention;
+  border-radius: 15px;
+  padding: 22px 20px;
+  margin-bottom: 39px;
+}
+
+.details__title {
+  color: $color-text-secondary;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.details__text {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $color-text-secondary;
+
+  &--accent {
+    font-weight: 700;
+    font-size: 24px;
+
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 6px;
+    color: $color-text-main;
+  }
+}
+
+.details__term-start,
+.details__term-end {
+  width: 280px;
+  height: 54px;
+  padding: 16px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $color-text-main;
+  border: 2px solid $color-border;
+  border-radius: 9px;
+  margin-top: 10px;
+}
+
+.details__term-item .details__term-label {
+  position: relative;
+}
+
+.calendar {
+  position: absolute;
+  fill: #eeeeee;
+  top: 68%;
+  right: 20px;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.details__term-item:not(:last-child) {
+  margin-bottom: 40px;
+}

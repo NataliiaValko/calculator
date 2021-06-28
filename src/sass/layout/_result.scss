@@ -1,0 +1,58 @@
+.result {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background-color: $background-color-attention;
+}
+
+.result__list {
+  margin-bottom: 30px;
+}
+.result__item-schedule {
+  display: none;
+}
+
+.result__amount,
+.result__percent,
+.result__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result__item-amount {
+  margin-bottom: 13px;
+}
+
+.result__item-percent {
+  margin-bottom: 42px;
+}
+
+.result__amount-text,
+.result__amount-value,
+.result__percent-text,
+.result__percent-value,
+.result__total-text,
+.result__total-value {
+  color: $color-text-secondary;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.result__total-value {
+  font-weight: 900;
+  color: $color-text-main;
+}
+
+.result__percent {
+  position: relative;
+}
+
+.result__percent-value::after {
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $color-border;
+}

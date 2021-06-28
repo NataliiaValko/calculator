@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yield calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="jquery.range.css"> -->
+    <!-- <link href="../dist/css/datepicker.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="logotype" href="#">
+          <svg class="logotype__image" aria-label="Yield calculator" width="48" height="48">
+            <use class="logotype__icon" href="./images/symbol-defs.svg#icon-logotype"></use>
+          </svg>
+        </a>
+        <h1 class="header__title">Profitability calculation</h1>
+      </div>
+    </header>
+    <section class="details">
+      <div class="container">
+        <h2 class="visually-hidden details__title">Deposit details</h2>
+        <form class="details__form-type" name="details-deposit" action="data-deposit.js">
+          <label class="details__label">Type deposit
+            <!-- <input type="text" name="type" id="type" list="deposit-type"> -->
+            <select class="details__select" size="1" name="type" required>//////////////////
+              <!-- <option></option> -->
+              <option class="details__option" selected="selected" disabled>Select a deposit</option>
+              <option class="details__option" value="Short-term">Short-term</option>
+              <option class="details__option" value="Standart">Standart</option>
+              <option class="details__option" value="Long-term">Long-term</option>
+            </select>
+          </label>
+          <ul class="currency__list list">
+            <li class="currency__item currency__item--current">
+              <button type="button" class="currency__value">BTC</button>
+            </li>
+            <li class="currency__item">
+              <button type="button" class="currency__value">UAH</button>
+            </li>
+            <li class="currency__item">
+              <button type="button" class="currency__value">RUB</button>
+            </li>
+            <li class="currency__item">
+              <button type="button" class="currency__value">EUR</button>
+            </li>
+            <li class="currency__item">
+              <button type="button" class="currency__value">USD</button>
+            </li>
+          </ul>
+          <label class="details__label details__label-amount">Amount of investments
+            <input type="range" min="0" max="10000" step="any" name="amount" class="details__amount-rang">
+            <input type="text" name="amount" class="details__amount-input">
+            <span class="details__amount-currency">BTC</span>
+          </label>
+          <label class="details__label">Investment term ( Months )
+            <!-- <div class="single-slider"></div> -->
+            <!-- <input type="text" name="term" class="deposit__term-input" list="tickmarks" min="1" max="12" value="4" step="1"> -->
+            <input type="range" name="term" class="details__term-input single-slider" list="tickmarks" min="0" max="11" step="1" value="3">
+            <ul class="tickmarks__list list">
+              <li class="tickmarks__item">1</li>
+              <li class="tickmarks__item">2</li>
+              <li class="tickmarks__item">3</li>
+              <li class="tickmarks__item">4</li>
+              <li class="tickmarks__item">5</li>
+              <li class="tickmarks__item">6</li>
+              <li class="tickmarks__item">7</li>
+              <li class="tickmarks__item">8</li>
+              <li class="tickmarks__item">9</li>
+              <li class="tickmarks__item">10</li>
+              <li class="tickmarks__item">11</li>
+              <li class="tickmarks__item">12</li>
+            </ul>
+            <!-- <datalist id="tickmarks" class="details__term-marks">
+              <option class="details__term-mark" value="1" label="1">
+              <option class="details__term-mark" value="2" label="2">
+              <option class="details__term-mark" value="3" label="3">
+              <option class="details__term-mark" value="4" label="4">
+              <option class="details__term-mark" value="5" label="5">
+              <option class="details__term-mark" value="6" label="6">
+              <option class="details__term-mark" value="7" label="7">
+              <option class="details__term-mark" value="8" label="8">
+              <option class="details__term-mark" value="9" label="9">
+              <option class="details__term-mark" value="10" label="10">
+              <option class="details__term-mark" value="11" label="11">
+              <option class="details__term-mark" value="12" label="12">
+            </datalist> -->
+          </label>
+          <div class="details__rate">
+            <h3 class="details__title">Interest rate</h3>
+            <p class="details__text"><span class="details__text--accent">0%</span>per day</p>
+          </div>
+          <ul class="details__term-list list">
+            <li class="details__term-item">
+              <label class="details__term-label">Investment start
+                <input type="text" name="start" class="details__term-start datepicker-here" data-position="center center" />
+                <svg class="calendar" width="16" height="16">
+                  <use class="calendar__icon" href="./images/symbol-defs.svg#icon-Calendar"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="details__term-item">
+              <label class="details__term-label">Investment completion
+                <input type="text" name="end" class="details__term-end datepicker-here" data-position="center center" disabled/>
+                <svg class="calendar" width="16" height="16">
+                  <use class="calendar__icon" href="./images/symbol-defs.svg#icon-Calendar"></use>
+                </svg>
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </section>
+    <section class="result">
+      <div class="container">
+        <h2 class="visually-hidden result__title">Deposit result</h2>
+        <ul class="result__list list">
+          <li class="result__item-schedule">
+            <div class="result__amount-schedule">
+              <p class="result__amount-text">Have invested</p>
+              <p class="result__amount-value">10.000 BTC</p>
+              <div class="result__invest-schedule"></div>
+            </div>
+          </li>
+          <li class="result__item-schedule">
+            <div class="result__profit-schedule">
+              <p class="result__profit-text">Make a profit</p>
+              <p class="result__profit-value">19.150 BTC</p>
+              <div class="result__invest-schedule"></div>
+              <div class="result__profit-schedule"></div>
+            </div>
+          </li>
+          <li class="result__item-amount">
+            <div class="result__amount">
+              <p class="result__amount-text">Investment</p>
+              <p class="result__amount-value">10.000 BTC</p>
+            </div>
+          </li>
+          <li class="result__item-percent">
+            <div class="result__percent">
+              <p class="result__percent-text">Profit percentage</p>
+              <p class="result__percent-value">91.5 %</p>
+            </div>
+          </li>
+          <li class="result__item">
+            <div class="result__total">
+              <p class="result__total-text">Profit with investment</p>
+              <p class="result__total-value">9,150 BTC</p>
+            </div>
+          </li>
+        </ul>
+        <button type="button" class="button">Invest now</button>
+      </div>
+    </section>
+    <!-- <script src="./js/jquery.range-min.js"></script> -->
+    <!-- <script src="../dist/js/datepicker.min.js"></script> -->
+  </body>
+</html>
