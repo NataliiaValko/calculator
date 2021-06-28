@@ -1,6 +1,13 @@
 .currency__list {
   display: flex;
   margin-bottom: 50px;
+
+  @media screen and (min-width: $mobile-third) {
+    margin-left: 40px;
+    margin-bottom: 0;
+    position: relative;
+    top: 10px;
+  }
 }
 
 .currency__item {
@@ -10,6 +17,10 @@
 
   &:not(:last-child) {
     margin-right: 12px;
+
+    @media screen and (min-width: $mobile-third) {
+      margin-right: 20px;
+    }
   }
 
   &--current {

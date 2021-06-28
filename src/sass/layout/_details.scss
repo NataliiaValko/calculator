@@ -1,6 +1,23 @@
 .details {
   padding-bottom: 40px;
   padding-top: 40px;
+
+  @media screen and (min-width: $mobile-third) {
+    padding-top: 60px;
+  }
+}
+
+.details__form {
+  width: 100%;
+}
+
+.details__type-thumb {
+  @media screen and (min-width: $mobile-third) {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 }
 
 .details__title,
@@ -15,8 +32,15 @@
   display: inline-block;
 }
 
-.details__label {
+.details__label-type {
   margin-bottom: 40px;
+
+  @media screen and (min-width: $mobile-third) {
+    margin-bottom: 0;
+  }
+}
+
+.details__label {
 }
 
 .details__select,
@@ -33,34 +57,122 @@
   background-color: transparent;
 }
 
+.details__select {
+  @media screen and (min-width: $mobile-third) {
+    width: 260px;
+  }
+}
+
+.details__input-thumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+  width: 440px;
+
+  @media screen and (min-width: $mobile-third) {
+    width: 100%;
+  }
+}
+
 .details__amount-rang {
   display: none;
+  width: 240px;
+  height: 38px;
+  // font-size: 16px;
+  // line-height: 1.188;
+  -webkit-appearance: none;
+  appearance: none;
+
+  @media screen and (min-width: $mobile-third) {
+    width: 360px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    border-radius: 30px;
+    height: 10px;
+    border: none;
+    background-color: $color-light-accent;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: $color-light-main;
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    width: 15px;
+    height: 38px;
+    cursor: pointer;
+    margin-top: -14px;
+  }
 
   @media screen and (min-width: $mobile-secondary) {
     display: inline-block;
   }
 }
 
-// .details__amount-input {
-//   position: relative;
-// }
+.details__amount-input {
+  @media screen and (min-width: $mobile-secondary) {
+    width: 160px;
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $mobile-third) {
+    width: 200px;
+    font-size: 18px;
+  }
+}
 
 .details__label-amount {
   position: relative;
+  width: 100%;
+  margin-bottom: 40px;
 }
+
+.details__label-term {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $mobile-secondary) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $mobile-third) {
+    margin-bottom: 0;
+    width: 360px;
+  }
+}
+
 .details__amount-currency {
   position: absolute;
   top: 70%;
   right: 20px;
   display: block;
   transform: translateY(-50%);
+
+  @media screen and (min-width: $mobile-secondary) {
+    font-size: 14px;
+    right: 15px;
+  }
+
+  @media screen and (min-width: $mobile-third) {
+    font-size: 18px;
+    right: 20px;
+  }
 }
 
 .details__rate {
   background-color: $background-color-attention;
   border-radius: 15px;
   padding: 22px 20px;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $mobile-third) {
+    margin-bottom: 0;
+    width: 200px;
+  }
 }
 
 .details__title {
@@ -69,6 +181,10 @@
   font-size: 18px;
   text-align: center;
   margin-bottom: 13px;
+
+  @media screen and (min-width: $mobile-secondary) {
+    margin-bottom: 10px;
+  }
 }
 
 .details__text {
@@ -92,6 +208,24 @@
   }
 }
 
+.details__term-thumb {
+  @media screen and (min-width: $mobile-third) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}
+
+.details__term-list {
+  width: 280px;
+
+  @media screen and (min-width: $mobile-third) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .details__term-start,
 .details__term-end {
   width: 280px;
@@ -100,9 +234,16 @@
   font-weight: 500;
   font-size: 18px;
   color: $color-text-main;
+  background-color: transparent;
   border: 2px solid $color-border;
   border-radius: 9px;
   margin-top: 10px;
+}
+
+.details__term-item {
+  @media screen and (min-width: $mobile-third) {
+    width: 280px;
+  }
 }
 
 .details__term-item .details__term-label {
@@ -120,4 +261,8 @@
 
 .details__term-item:not(:last-child) {
   margin-bottom: 40px;
+
+  @media screen and (min-width: $mobile-third) {
+    margin-bottom: 0;
+  }
 }

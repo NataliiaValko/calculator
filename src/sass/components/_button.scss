@@ -13,4 +13,14 @@
   text-transform: uppercase;
 
   color: $color-text-main;
+
+  @media screen and (min-width: $mobile-secondary) {
+    width: 440px;
+    height: 70px;
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $mobile-third) {
+    width: 600px;
+  }
 }

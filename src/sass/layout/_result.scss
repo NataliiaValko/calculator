@@ -20,10 +20,18 @@
 
 .result__item-amount {
   margin-bottom: 13px;
+
+  @media screen and (min-width: $mobile-secondary) {
+    margin-bottom: 10px;
+  }
 }
 
 .result__item-percent {
   margin-bottom: 42px;
+
+  @media screen and (min-width: $mobile-secondary) {
+    margin-bottom: 45px;
+  }
 }
 
 .result__amount-text,
@@ -40,6 +48,10 @@
 .result__total-value {
   font-weight: 900;
   color: $color-text-main;
+
+  @media screen and (min-width: $mobile-third) {
+    font-size: 24px;
+  }
 }
 
 .result__percent {

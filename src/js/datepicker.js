@@ -9,7 +9,7 @@ const $ = require('jquery')
         containerBuilt = false,
         baseTemplate = '' +
             '<div class="datepicker">' +
-            '<i class="datepicker--pointer"></i>' +
+            // '<i class="datepicker--pointer"></i>' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
             '</div>',
@@ -26,7 +26,7 @@ const $ = require('jquery')
             toggleSelected: true,
             keyboardNav: true,
 
-            position: 'bottom left',
+            position: 'top left',
             offset: 12,
 
             view: 'days',

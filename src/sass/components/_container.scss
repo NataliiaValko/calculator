@@ -13,4 +13,8 @@
   @media screen and (min-width: $mobile-secondary) {
     width: $mobile-secondary;
   }
+
+  @media screen and (min-width: $mobile-third) {
+    width: $mobile-third;
+  }
 }

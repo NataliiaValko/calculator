@@ -11,7 +11,10 @@
       width: 370px;
       font-size: 28px;
     }
+
+    @media screen and (min-width: $mobile-third) {
+      width: 450px;
+      font-size: 36px;
+    }
   }
 }
-
-//370px
