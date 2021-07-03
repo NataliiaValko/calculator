@@ -265,7 +265,8 @@ const $ = require('jquery')
 
         _buildDatepickersContainer: function () {
             containerBuilt = true;
-            $body.append('<div class="datepickers-container" id="datepickers-container"></div>');
+            $datepickersHere = $('.details__term-item');////////////////////////////////////
+            $datepickersHere.append('<div class="datepickers-container" id="datepickers-container"></div>');/////////////////////////////////////////////////////////////
             $datepickersContainer = $('#datepickers-container');
         },
 
@@ -800,7 +801,7 @@ const $ = require('jquery')
                     if (/left|right/.test(main)) {
                         top = dims.top + dims.height/2 - selfDims.height/2;
                     } else {
-                        left = dims.left + dims.width/2 - selfDims.width/2;
+                        left = 35;
                     }
             }
 

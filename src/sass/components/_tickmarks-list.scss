@@ -14,36 +14,48 @@
 .tickmarks__item:nth-child(-n + 6) {
   margin-right: 17px;
 
-  @media screen and (min-width: $mobile-secondary) {
+  @media screen and (min-width: $mobile-second) {
     margin-right: 32px;
   }
 
   @media screen and (min-width: $mobile-third) {
     margin-right: 24px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 32px;
+  }
 }
 
 .tickmarks__item:nth-child(-n + 8).tickmarks__item:nth-child(n + 7) {
   margin-right: 14px;
 
-  @media screen and (min-width: $mobile-secondary) {
+  @media screen and (min-width: $mobile-second) {
     margin-right: 26px;
   }
 
   @media screen and (min-width: $mobile-third) {
     margin-right: 16px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 32px;
+  }
 }
 
 .tickmarks__item:nth-child(-n + 11).tickmarks__item:nth-child(n + 9) {
   margin-right: 10px;
 
-  @media screen and (min-width: $mobile-secondary) {
+  @media screen and (min-width: $mobile-second) {
     margin-right: 26px;
   }
 
   @media screen and (min-width: $mobile-third) {
     margin-right: 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 24px;
   }
 }
 

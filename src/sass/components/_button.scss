@@ -14,7 +14,7 @@
 
   color: $color-text-main;
 
-  @media screen and (min-width: $mobile-secondary) {
+  @media screen and (min-width: $mobile-second) {
     width: 440px;
     height: 70px;
     font-size: 18px;
@@ -22,5 +22,13 @@
 
   @media screen and (min-width: $mobile-third) {
     width: 600px;
+  }
+
+  @media screen and (min-width: $tablet-first) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 360px;
   }
 }

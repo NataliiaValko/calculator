@@ -1,14 +1,98 @@
 .result {
   padding-top: 40px;
-  padding-bottom: 60px;
-  background-color: $background-color-attention;
+  padding-bottom: 85px;
+  // background-color: $background-color-attention;////////////////
+
+  @media screen and (min-width: $tablet-first) {
+    padding-bottom: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 320px;
+    background-color: transparent;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 420px;
+  }
 }
 
 .result__list {
   margin-bottom: 30px;
 }
-.result__item-schedule {
+
+.result__list-schedule {
   display: none;
+
+  @media screen and (min-width: $tablet-first) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.result__item-schedule {
+  @media screen and (min-width: $tablet-first) {
+    width: 120px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 160px;
+  }
+}
+// .result-box {
+//   @media screen and (min-width: $tablet-first) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+.result__schedule-text {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: $color-text-secondary;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.result__schedule-value {
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+  }
+}
+
+.result__invest-schedule {
+  width: 100%;
+  height: 100px;
+  background-color: $color-light-main;
+  box-shadow: 20px 10px 60px rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
+}
+
+.result__invest-schedule--part {
+  width: 100%;
+  height: 100px;
+  background-color: $color-light-main;
+  box-shadow: 20px 10px 60px rgba(0, 0, 0, 0.07);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.result__profit-schedule {
+  width: 100%;
+  height: 100px;
+  background-color: $color-light-accent;
+  box-shadow: 20px 10px 60px rgba(0, 0, 0, 0.07);
+  border-radius: 15px 15px 0px 0px;
 }
 
 .result__amount,
@@ -16,12 +100,13 @@
 .result__total {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .result__item-amount {
   margin-bottom: 13px;
 
-  @media screen and (min-width: $mobile-secondary) {
+  @media screen and (min-width: $mobile-second) {
     margin-bottom: 10px;
   }
 }
@@ -29,7 +114,7 @@
 .result__item-percent {
   margin-bottom: 42px;
 
-  @media screen and (min-width: $mobile-secondary) {
+  @media screen and (min-width: $mobile-second) {
     margin-bottom: 45px;
   }
 }
@@ -43,6 +128,24 @@
   color: $color-text-secondary;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media screen and (min-width: $tablet-first) {
+    font-size: 16px;
+  }
+}
+
+.result__amount-text,
+.result__amount-value,
+.result__percent-text,
+.result__percent-value,
+.result__total-text {
+  @media screen and (min-width: $tablet-first) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
 }
 
 .result__total-value {
@@ -50,6 +153,14 @@
   color: $color-text-main;
 
   @media screen and (min-width: $mobile-third) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $tablet-first) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
     font-size: 24px;
   }
 }

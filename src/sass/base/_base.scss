@@ -3,11 +3,70 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.167;
-  background-color: $color-light-main;
+  min-height: 100vh;
+  // background-color: $color-light-main;
+
+  background-image: linear-gradient(
+    to bottom,
+    $color-light-main 996px,
+    $background-color-attention 996px,
+    $background-color-attention 100%
+  );
   color: $color-text-main;
+
+  @media screen and (min-width: $mobile-third) {
+    background-image: linear-gradient(
+      to bottom,
+      $color-light-main 709px,
+      $background-color-attention 709px,
+      $background-color-attention 100%
+    );
+  }
+
+  @media screen and (min-width: $tablet-first) {
+    background-image: linear-gradient(
+      to right,
+      $color-light-main calc(640px + (100vw - #{$tablet-first}) / 2),
+      $background-color-attention calc(320px + (100vw - #{$tablet-first}) / 2)
+    );
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+      to right,
+      $color-light-main calc(780px + (100vw - #{$desktop}) / 2),
+      $background-color-attention calc(420px + (100vw - #{$desktop}) / 2)
+    );
+  }
 }
 
-// a,
+.vertical-splitting {
+  @media screen and (min-width: $tablet-first) {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 90px;
+    padding-top: 90px;
+
+    // min-height: 100vh;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+    padding-bottom: 160px;
+    padding-top: 160px;
+  }
+}
+
+// .light-box {
+//   @media screen and (min-width: $tablet-first) {
+//     width: 640px;
+//     padding-bottom: 90px;
+//   }
+// }
+
 button {
   cursor: pointer;
 }

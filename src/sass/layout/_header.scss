@@ -1,13 +1,18 @@
 .header {
   padding-top: 60px;
 
+  @media screen and (min-width: $tablet-first) {
+    padding-top: 93px;
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 20px;
+    font-weight: 700;
     width: 130px;
 
-    @media screen and (min-width: $mobile-secondary) {
+    @media screen and (min-width: $mobile-second) {
       width: 370px;
       font-size: 28px;
     }
@@ -16,5 +21,9 @@
       width: 450px;
       font-size: 36px;
     }
+  }
+
+  @media screen and (min-width: $tablet-first) {
+    padding-top: 0;
   }
 }
