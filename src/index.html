@@ -43,25 +43,25 @@
               </label>
               <ul class="currency__list list">
                 <li class="currency__item currency__item--current">
-                  <button type="button" class="currency__value">BTC</button>
+                  <button type="button" class="currency__value" data-currency="btc">BTC</button>
                 </li>
                 <li class="currency__item">
-                  <button type="button" class="currency__value">UAH</button>
+                  <button type="button" class="currency__value" data-currency="uah">UAH</button>
                 </li>
                 <li class="currency__item">
-                  <button type="button" class="currency__value">RUB</button>
+                  <button type="button" class="currency__value" data-currency="rub">RUB</button>
                 </li>
                 <li class="currency__item">
-                  <button type="button" class="currency__value">EUR</button>
+                  <button type="button" class="currency__value" data-currency="eur">EUR</button>
                 </li>
                 <li class="currency__item">
-                  <button type="button" class="currency__value">USD</button>
+                  <button type="button" class="currency__value" data-currency="usd">USD</button>
                 </li>
               </ul>
             </div>
             <label class="details__label details__label-amount">Amount of investments
               <div class="details__input-box">
-                <input type="range" min="0" max="10000" step="any" name="amount" class="details__amount-rang">
+                <input type="range" min="0" max="1000" step="any" name="amount" class="details__amount-rang">
                 <input type="text" name="amount" class="details__amount-input" value="0.00">
                 <span class="details__amount-currency">BTC</span>
               </div>
@@ -191,8 +191,7 @@
             <button type="button" class="button">Invest now</button>
           </div>
         <!-- </div> -->
-      <!-- </div> -->
-      
+      <!-- </div> -->      
     </section>
   </div>
   <!-- <script src="./js/jquery.range-min.js"></script> -->
