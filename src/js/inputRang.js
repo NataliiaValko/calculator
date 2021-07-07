@@ -1,5 +1,5 @@
 
-const inp = document.querySelector('.details__term-input')
+// const inp = document.querySelector('.details__term-input')
 // console.log(inp.style.appearance = none)
 
 

@@ -222,19 +222,10 @@
 .datepickers-container {
   position: absolute;
   left: -20px;
-  top: 35px;
-
-  @media screen and (min-width: $mobile-second) {
-    top: 40px;
-  }
-
-  @media screen and (min-width: $mobile-third) {
-    top: 40px;
-  }
+  top: 90px;
 
   @media screen and (min-width: $desktop) {
     left: -30px;
-    top: 45px;
   }
 }
 

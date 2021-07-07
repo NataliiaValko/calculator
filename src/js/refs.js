@@ -1,9 +1,11 @@
 export default {
+    form: document.querySelector('.details__form'),
     typeDeposit: document.querySelector('.details__select'),
     percentDeposit: document.querySelector('.details__text--accent'),
     percentDepositResult: document.querySelector('.result__percent-value'),
 
     currencyListDeposit: document.querySelector('.currency__list'),
+    allCurrency:document.querySelectorAll('.currency__value'),
     currencyCurrentDeposit: document.querySelector('.details__amount-currency'),
 
     amountDepositRange: document.querySelector('.details__amount-rang'),
