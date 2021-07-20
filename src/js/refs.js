@@ -1,7 +1,7 @@
 export default {
     form: document.querySelector('.details__form'),
     typeDeposit: document.querySelector('.details__select'),
-    percentDeposit: document.querySelector('.details__text--accent'),
+    percentDayDeposit: document.querySelector('.details__text--accent'),
     percentDepositResult: document.querySelector('.result__percent-value'),
 
     currencyListDeposit: document.querySelector('.currency__list'),
@@ -10,16 +10,18 @@ export default {
 
     amountDepositRange: document.querySelector('.details__amount-rang'),
     amountDepositInput: document.querySelector('.details__amount-input'),
-    amountInvested: document.querySelector('.result__schedule-amount .result__schedule-value'),
-    amountInvestedSchedule: document.querySelector('.result__schedule-amount .result__invest-schedule'),
+    amountInvested: document.querySelector('.result__chart-amount .result__chart-value'),
+    amountInvestedChart: document.querySelector('.result__chart-amount .result__invest-chart'),
     amountInvestedResult: document.querySelector('.result__amount-value'),
 
-    amountTotalProfit: document.querySelector('.result__schedule-profit .result__schedule-value'),
-    amountProfitSchedule: document.querySelector('.result__schedule-profit .result__invest-schedule'),
-    amountStartInvestedSchedule: document.querySelector('.result__invest-schedule--part'),
+    amountTotalProfit: document.querySelector('.result__chart-profit .result__chart-value'),
+    amountStartChart: document.querySelector('.result__chart-profit .result__invest-chart'),
+    amountProfitChart: document.querySelector('.result__chart-profit .result__profit-chart'),
+    amountStartInvestedChart: document.querySelector('.result__invest-chart--part'),
     amountProfitResult: document.querySelector('.result__total-value'),
 
     termDeposit: document.querySelector('.details__term-input'),
+    termListDeposit: document.querySelectorAll('.tickmarks__item'),
     startDeposit: document.querySelector('.details__term-start'),
     endDeposit: document.querySelector('.details__term-end'),
 

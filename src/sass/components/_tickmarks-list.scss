@@ -62,3 +62,7 @@
 // .tickmarks__item:nth-child(11) {
 //   margin-right: 11px;
 // }
+
+.tickmarks__item--current {
+  color: $color-text-main;
+}

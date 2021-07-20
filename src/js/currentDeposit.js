@@ -4,4 +4,6 @@ export default {
     percent: null,
     currency: 'btc',
     term: 1,
+    dateStart: null,
+    profit: 0
     }

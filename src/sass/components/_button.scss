@@ -13,6 +13,14 @@
   text-transform: uppercase;
 
   color: $color-text-main;
+  transition: color $time-main $timing-function-main,
+    background-color $time-main $timing-function-main;
+
+  &:hover,
+  &:focus {
+    background-color: $color-dark-accent;
+    color: $color-light-accent;
+  }
 
   @media screen and (min-width: $mobile-second) {
     width: 440px;

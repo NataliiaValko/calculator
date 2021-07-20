@@ -22,7 +22,7 @@ export default [
     {
         type: 'long-term',
         percent: {
-            btc: 70,
+            btc: 60,
             uah: 40,
             rub: 35,
             eur: 25,

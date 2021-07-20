@@ -265,6 +265,14 @@
   }
 }
 
+.details__term-end {
+  color: $color-text-secondary;
+}
+
+.details__term-start {
+  color: $color-text-main;
+}
+
 .details__term-start,
 .details__term-end {
   width: 280px;
@@ -272,7 +280,6 @@
   padding: 16px 20px;
   font-weight: 500;
   font-size: 18px;
-  color: $color-text-main;
   background-color: transparent;
   border: 2px solid $color-border;
   border-radius: 9px;

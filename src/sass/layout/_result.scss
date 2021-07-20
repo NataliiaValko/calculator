@@ -21,7 +21,7 @@
   margin-bottom: 30px;
 }
 
-.result__list-schedule {
+.result__list-chart {
   display: none;
 
   @media screen and (min-width: $tablet-first) {
@@ -33,7 +33,7 @@
   }
 }
 
-.result__item-schedule {
+.result__item-chart {
   @media screen and (min-width: $tablet-first) {
     width: 120px;
   }
@@ -49,7 +49,7 @@
 //   }
 // }
 
-.result__schedule-text {
+.result__chart-text {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -60,7 +60,7 @@
   }
 }
 
-.result__schedule-value {
+.result__chart-value {
   font-size: 16px;
   font-weight: 900;
   margin-top: 0;
@@ -71,7 +71,7 @@
   }
 }
 
-.result__invest-schedule {
+.result__invest-chart {
   width: 100%;
   height: 0;
   background-color: $color-light-main;
@@ -79,7 +79,7 @@
   border-radius: 15px;
 }
 
-.result__invest-schedule--part {
+.result__invest-chart--part {
   width: 100%;
   height: 0;
   background-color: $color-light-main;
@@ -87,7 +87,7 @@
   border-radius: 0px 0px 15px 15px;
 }
 
-.result__profit-schedule {
+.result__profit-chart {
   width: 100%;
   height: 0;
   background-color: $color-light-accent;
@@ -119,6 +119,18 @@
   }
 }
 
+.result__total-text {
+  width: 120px;
+
+  @media screen and (min-width: $mobile-second) {
+    width: 160px;
+  }
+
+  @media screen and (min-width: $tablet-first) {
+    width: 155px;
+  }
+}
+
 .result__amount-text,
 .result__amount-value,
 .result__percent-text,
@@ -139,9 +151,9 @@
 .result__percent-text,
 .result__percent-value,
 .result__total-text {
-  @media screen and (min-width: $tablet-first) {
-    font-size: 16px;
-  }
+  // @media screen and (min-width: $tablet-first) {
+  //   font-size: 16px;
+  // }
 
   @media screen and (min-width: $desktop) {
     font-size: 18px;

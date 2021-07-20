@@ -2251,29 +2251,3 @@ const $ = require('jquery')
     };
 })();
  })(window, $);
-
- 
-//////////////////////////////////
-////////////////////////////////
-
-////////////////////////////////////////////////////////////////////////////////////var myDatepicker = $('#my-elem').datepicker().data('datepicker');
-////////////////////////////////////////////////////////////////////////////////////myDatepicker.date = new Date();
-
-// console.log(myDatepicker.show())
-
-//  $('#example-show-hide-callbacks').datepicker({
-//     onShow: function(dp, animationCompleted){
-//         if (!animationCompleted) {
-//             log('start showing')
-//         } else {
-//             log('finished showing')
-//         }
-//     },
-//     onHide: function(dp, animationCompleted){
-//         if (!animationCompleted) {
-//             log('start hiding')
-//         } else {
-//             log('finished hiding')
-//         }
-//     }
-// })
