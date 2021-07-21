@@ -3,6 +3,7 @@ import currentDeposit from './currentDeposit';
 import setPercent from './setPercent';
 import listDeposits from './listDeposits';
 import actionRefreshForm from './refreshForm';
+import resetEndDate from './setStartDate';
 import { setAttributeMinTermInput, addClassCurrentTickmarks } from './setTerm';
 
 const setTypeCurrentDeposit = (e) => {
@@ -34,7 +35,9 @@ const doInputEvent = (target) => {
     const event = new Event('input');
     target.dispatchEvent(event)
     addClassCurrentTickmarks();
+    resetEndDate();
     target.removeEventListener('input', setTerm)
+
 }
 
 const setTypeDeposit = (e) => {

@@ -1,6 +1,6 @@
 import refs from './refs';
 import currentDeposit from './currentDeposit';
-import setEnd from './setStartDate';
+import resetEndDate from './setStartDate';
 import actionRefreshForm from './refreshForm';
 import listDeposits from './listDeposits';
 import { messageTermError } from './toastr';
@@ -41,16 +41,12 @@ const setTermCurrentDeposit = (e) => {
 const setTermDeposit = (e) => {
         if (e.target.value < currentDeposit.minTerm) {
                 messageTermError(currentDeposit.minTerm);
-                resetTermForMinTerm(e)
+                resetTermForMinTerm(e);
                 addClassCurrentTickmarks();
-            return
         }
 
         setTermCurrentDeposit(e);
-         if (currentDeposit.dateStart) {
-                setEnd(currentDeposit.dateStart);
-        }
-
+        resetEndDate()
         addClassCurrentTickmarks();
         setAttributeValueInput();
         actionRefreshForm.setHeightBoxProfitChart();

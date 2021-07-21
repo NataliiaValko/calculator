@@ -45,5 +45,11 @@ const setEnd = (date) => {
     }
 }
 
+const resetEndDate = () => {
+    if (currentDeposit.dateStart) {
+                setEnd(currentDeposit.dateStart);
+        }
+}
+
 refs.startDeposit.addEventListener('focusout', setStartDeposit);
-export default setEnd;
+export default resetEndDate;
