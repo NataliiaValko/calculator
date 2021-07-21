@@ -5,12 +5,10 @@ import { messageAmountWarning } from './toastr';
 const debounce = require('lodash.debounce')
 
 const onErrorsBorder = () => {
-        console.log('on')
         refs.amountDepositInput.classList.add('color-border--invalid');
 }
 
 const offErrorsBorder = () => {
-        console.log('off')
         refs.amountDepositInput.classList.remove('color-border--invalid')
 }
 
@@ -35,6 +33,7 @@ const setAmount = (e) => {
 }
 
 const setAmountDepositRang = (e) => {
+        offErrorsBorder();
         refs.amountDepositInput.value = setAmount(e).toFixed(2);
 }
 

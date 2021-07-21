@@ -1,7 +1,7 @@
 import toastr from 'toastr';
 
 const messageAmountInvalid = 'Enter amount no more 1000.00, please!';
-const messageTermInvalid = 'You can’t use less than the minimum term! Increase it please!';
+const messageTermInvalid = minTerm => `You can’t use less than the minimum term! Increase it please! Minimal term is ${minTerm} months.`;
 
 toastr.options = {
   "closeButton": true,
@@ -13,7 +13,7 @@ toastr.options = {
   "onclick": null,
   "showDuration": "300",
   "hideDuration": "1000",
-  "timeOut": "5000",
+  "timeOut": "3000",
   "extendedTimeOut": "1000",
   "showEasing": "swing",
   "hideEasing": "linear",
@@ -22,6 +22,6 @@ toastr.options = {
 }
 
 const messageAmountWarning = () => toastr.warning(messageAmountInvalid);
-const messageTermError = () => toastr.error(messageTermInvalid);
+const messageTermError = (minTerm) => toastr.error(messageTermInvalid(minTerm));
 
 export { messageAmountWarning, messageTermError }
