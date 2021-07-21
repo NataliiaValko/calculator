@@ -4,6 +4,16 @@ import actionRefreshForm from './refreshForm';
 import { messageAmountWarning } from './toastr';
 const debounce = require('lodash.debounce')
 
+const onErrorsBorder = () => {
+        console.log('on')
+        refs.amountDepositInput.classList.add('color-border--invalid');
+}
+
+const offErrorsBorder = () => {
+        console.log('off')
+        refs.amountDepositInput.classList.remove('color-border--invalid')
+}
+
 const roundAmount = (amount) => {
         return Math.floor(amount * 100) / 100;
 }
@@ -29,11 +39,14 @@ const getAmountDepositRang = (e) => {
 }
 
 const getAmountDepositInput = (e) => {
+        onErrorsBorder()//////////////
+
         if (e.target.value > 1000) {
-            messageAmountWarning()
+                messageAmountWarning()
             return
         }
 
+        offErrorsBorder();/////////////////////////////
         refs.amountDepositRange.value = setAmount(e);
 }
 

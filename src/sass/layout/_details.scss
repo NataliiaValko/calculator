@@ -62,6 +62,11 @@
   background-color: transparent;
 }
 
+.color-border--invalid {
+  border: 2px solid $color-text-error;
+  color: $color-text-error;
+}
+
 .details__select {
   @media screen and (min-width: $mobile-third) {
     width: 260px;
