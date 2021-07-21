@@ -1,6 +1,7 @@
 import toastr from 'toastr';
 
-const message = 'Enter amount no more 1000.00, please!';
+const messageAmountInvalid = 'Enter amount no more 1000.00, please!';
+const messageTermInvalid = 'You can’t use less than the minimum term! Increase it please!';
 
 toastr.options = {
   "closeButton": true,
@@ -20,6 +21,7 @@ toastr.options = {
   "hideMethod": "fadeOut"
 }
 
-const messageAmountWarning = () => toastr.warning(message)
+const messageAmountWarning = () => toastr.warning(messageAmountInvalid);
+const messageTermError = () => toastr.error(messageTermInvalid);
 
-export { messageAmountWarning }
+export { messageAmountWarning, messageTermError }

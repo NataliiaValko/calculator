@@ -1,6 +1,7 @@
 export default [
     {
         type: 'short-term',
+        minTerm: 2,
         percent: {
             btc: 30,
             uah: 15,
@@ -11,6 +12,7 @@ export default [
     },
     {
         type: 'standart',
+        minTerm: 4,
         percent: {
             btc: 50,
             uah: 35,
@@ -21,6 +23,7 @@ export default [
     },
     {
         type: 'long-term',
+        minTerm: 6,
         percent: {
             btc: 60,
             uah: 40,

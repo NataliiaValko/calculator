@@ -5,5 +5,6 @@ export default {
     currency: 'btc',
     term: 1,
     dateStart: null,
-    profit: 0
+    profit: 0,
+    minTerm: 0
     }

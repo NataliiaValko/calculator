@@ -34,23 +34,23 @@ const setAmount = (e) => {
     return amount;
 }
 
-const getAmountDepositRang = (e) => {
+const setAmountDepositRang = (e) => {
         refs.amountDepositInput.value = setAmount(e).toFixed(2);
 }
 
-const getAmountDepositInput = (e) => {
-        onErrorsBorder()//////////////
+const setAmountDepositInput = (e) => {
+        onErrorsBorder()
 
         if (e.target.value > 1000) {
                 messageAmountWarning()
             return
         }
 
-        offErrorsBorder();/////////////////////////////
+        offErrorsBorder();
         refs.amountDepositRange.value = setAmount(e);
 }
 
-refs.amountDepositRange.addEventListener('input', debounce(getAmountDepositRang, 500))
-refs.amountDepositInput.addEventListener('input', debounce(getAmountDepositInput, 500))
+refs.amountDepositRange.addEventListener('change', debounce(setAmountDepositRang, 500))
+refs.amountDepositInput.addEventListener('input', debounce(setAmountDepositInput, 500))
 
 export { roundAmount}

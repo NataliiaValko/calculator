@@ -14,12 +14,12 @@ const setCurrentClass = (target) => {
     target.classList.add('currency__item--current')
 }
 
-const getCurrencyDeposit = (e) => {
+const setCurrencyDeposit = (e) => {
     if (!e.target.classList.contains('currency__value')) {
         return
     }
-    const currency = e.target.dataset.currency;
-    currentDeposit.currency = currency;
+   
+    currentDeposit.currency = e.target.dataset.currency;
     setCurrentClass(e.target)
     setPercent(listDeposits);
     actionRefreshForm.setCurrentCurrencyTextContentInput();
@@ -31,4 +31,4 @@ const getCurrencyDeposit = (e) => {
     actionRefreshForm.setResultTotalText();
 }
 
-refs.currencyListDeposit.addEventListener('click', getCurrencyDeposit)
+refs.currencyListDeposit.addEventListener('click', setCurrencyDeposit)

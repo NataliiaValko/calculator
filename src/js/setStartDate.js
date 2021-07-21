@@ -29,7 +29,7 @@ const getYear = (date) => {
         : parseInt(yearStart) + 1;
 }
 
-const getStartDeposit = (e) => {
+const setStartDeposit = (e) => {
     const date = e.target.value;
     currentDeposit.dateStart = date;
     setEnd(date);
@@ -45,5 +45,5 @@ const setEnd = (date) => {
     }
 }
 
-refs.startDeposit.addEventListener('focusout', getStartDeposit);
+refs.startDeposit.addEventListener('focusout', setStartDeposit);
 export default setEnd;

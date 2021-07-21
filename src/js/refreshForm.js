@@ -96,6 +96,7 @@ const actionRefreshForm = {
     },
     
     setResultTotalText() {
+        console.log(currentDeposit)
         refs.amountProfitResult.textContent = getAmountTotalResult()
     }    
 }

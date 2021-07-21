@@ -7,17 +7,20 @@ const setPercentDayTextContent = () => {
     refs.percentDayDeposit.textContent = `${roundAmount(currentDeposit.percent / 30)}%`
 }
 
-const setPercent = () => {
-    if (!currentDeposit.type) {
-        return
-    }
-    
+const setPercentCurrentDeposit = () => {
     listDeposits.forEach((el) => {
         if (el.type === currentDeposit.type) {
             currentDeposit.percent = el.percent[currentDeposit.currency]
         }
     });
+}
+
+const setPercent = () => {
+    if (!currentDeposit.type) {
+        return
+    }
     
+    setPercentCurrentDeposit();
     setPercentDayTextContent();
 }
 
